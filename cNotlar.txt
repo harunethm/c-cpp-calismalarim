@@ -1,0 +1,150 @@
+
+% d = > sayı yazdırmak için
+% c = > tek harf yazdırmak için
+% f = > float bir sayı yazdırmak için
+% s = > string yazdırmak için
+
+
+
++= a = 2, a += 5, a = 7
+-= a = 8, a -= 3, a = 5
+*= a = 4, a *= 4, a = 16
+/= a = 6, a /= 3, a = 2
+
+
+
+a++      a = 5, a++, a = 6
+a = --b  a = 5, b = 4, a = --b, a = 3, b = 3
+a = b--  a = 5, b = 4, a = b--, a = 4, b = 3
+
+
+
+<=
+>=
+==
+!=
+
+
+
+&& ve(and)   1 && 1 == 1
+|| veya(or )  1 || a == 1
+
+
+
+if (tanımlamalar; koşul; ++)
+{
+	if'in içi doğruysa bu kısım çalışır
+}
+if'in içi doğru değilse iç kısım atlanıp burdan devam edilir yada else eklenir
+
+if ()
+{
+}
+else
+{
+}
+
+birden fazla kontrol edilecek şey varsa if else if kullanılır
+if ()
+{
+}
+else if ()
+{
+}
+else
+{
+}
+
+
+
+switch ()
+{
+case* :
+{
+}
+break;
+case* :
+{
+}
+break;
+}
+
+
+
+for (başlangıç değeri, koşul, artış miktarı)
+{
+	döngüde çalışacak kodlar, koşul sağlanana kadar tekrarlanır
+}
+
+while (koşul)
+{
+	önce koşula bakılıp koşul sağlanıyorsa dönecek kodlar
+}
+
+do
+{
+	bu komutlar çalıştırılır sonra alttaki while koşuluna bakılır
+		gerekirse tekrar buraya dönüp tekrarlanır
+} while ()
+
+
+
+veri_tipi fonk_ismi(içeriye değişken girilirken tekrar tanımlama yapılır)
+	{
+		tekrar ilerde çağırılabilmek üzere belli bi işlemi bir kere tanımlamak adına
+			main fonksiyonunun dışına tanımlanan fonksiyondur
+	}
+
+	çağırırken fonk_ismi(burda tanımlama yapmaya gerek olmaz direk değişken yazılır) şeklinde çağırılır
+
+
+
+		veri_tipi dizi_ismi[boyut]
+
+
+		strlen(dizi) = dizinin karakter sayısını bulur
+		strcpy(dizi1, dizi2) = dizi2 nin üstüne dizi1 i ekler
+		strncpy(dizi1, dizi2, a) = dizi2 nin a kadar karakterini dizi1 in üstüne ekler
+		strcat(dizi1, dizi2) = dizi2 yi dizi1 e ekler
+		strncat(dizi1, dizi2, a) = dizi2 nin a kadar karakterini dizi1 e ekler
+		strcmp(dizi1, dizi2) = dizi1 ve dizi2 nin büyüklüklerini karşılaştırır, dizi1 büyükse(1), dizi2 büyükse(0) değeri döndürür
+
+
+
+		veri_tipi * değişken_ismi = pointer tanımlanması
+
+
+
+		const (int, char, ...) degisken_ismi = sabit == = > sabit tanımlama yapar değişken isminin kullanıldığı yere atadığınız şeyi yazar
+
+
+
+		int* değişken_ismi = (int*)malloc(_boyut_ * sizeof(açılmasını_istediğin_alanın_veri_tipi)) == > değişkende _boyut_ kadar sizeof un içindeki veri tipinde yer açar
+		int* değişken_ismi = (int*)calloc(_boyut_, sizeof(düşürülmesini_istediğin_alanın_veri_tipi)) == > değişkenin büyüklüğünü _boyut_a düşürür
+		free(değişken_ismi) == > değişkenin içini boşaltır
+		realloc(değişken_ismi, _boyut_ * sizeof(dönüşmesini_istediğin_alanın_veri_tipi) == > değişkenin boyutunu _boyut_a dönüştürür
+
+
+
+			FILE * dosya = fopen("dosya_adi", "modu")
+
+
+			fopen(); ==> dosya açar dosya açılamazsa geriye 0 döner
+			fclose(); == > dosyayı kapatır dosya açılmamışsa hata verir
+			putc(); == > dosyaya karakter yazar
+			getc(); == > dosyadan karakter okur
+			feof(); == > dosya sonu kontrolü yapar sonuna geldiğinde true döner
+			fprintf(); == > dosyaya formatlı veri yazdırır
+			fscanf(); == > dosyadan formatlı veri okur
+			fputs(); == > dosyaya string yazar
+			fgets(); == > dosyadan string okur
+
+
+			fread(adres, sizeof, boyut, filepointer); == > dosyadan dizin okur
+			fwrite(); == > dosyaya dizin yazar
+			fseek(filepointer, offset, startpoint); == > verilere rastgele erişim sağlar
+			fread(dizi, sizeof(char) * 5, 1, dosya);
+	fwrite(dizi, sizeof(char), 5, dosya);
+	fseek(dosya, (sizeof(char) * 5, SEEK_SET);
+
+
